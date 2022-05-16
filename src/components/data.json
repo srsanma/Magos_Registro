@@ -1,0 +1,6 @@
+[
+    {"id": 1, "user": "Sanma" , "password": "seba", "name": "Sebastian", "last_name": "San Martin"},
+    {"id": 2, "user": "DraM", "password": "avadakadabra", "name": "Draco", "last_name": "Malfoy"},
+    {"id": 3, "user": "SevS", "password": "PotterLove", "name": "Severus", "last_name": "Snape"},
+    {"id": 4, "user": "AlbD", "password": "flipendo", "name": "Albus", "last_name": "Dumbledore"}
+]

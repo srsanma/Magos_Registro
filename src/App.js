@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {InfoCliente} from './components/InfoCliente'
+import {RegistroCliente} from './components/RegistroCliente'
+import {Welcome} from './components/Welcome'
+import {useContext} from 'react'
+import { ListadoClientes } from './components/ListadoClientes'
+import {Headder} from './components/Headder'
+
+
+const isLoggedIn = true;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!isLoggedIn || <Welcome />}       
+      {isLoggedIn || <Headder/>}
+      <main>
+      {/* <InfoCliente clientIndex={2}/>  
+      <RegistroCliente /> 
+      <ListadoClientes /> */}
+      </main>
     </div>
   );
 }
