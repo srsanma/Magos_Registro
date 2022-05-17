@@ -17,17 +17,20 @@ export const Headder = () => {
     return (
         
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">Magiregist</a>
+            <a className="navbar-brand" href={`/headder/${nameId}`}>Magiregist</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to="/listado" className="nav-link">Listado de Magos</Link>
+                        <Link to={`/listado/${nameId}`} className="nav-link">Listado de Magos</Link>
                     </li>
                     <li className="nav-item">
                         <Link to={`/infoCliente/${nameId}`}  className="nav-link">Mi Perfil</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to='/'  className="nav-link">Logout</Link>
                     </li>
 
                 </ul>

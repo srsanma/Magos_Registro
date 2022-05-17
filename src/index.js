@@ -20,10 +20,12 @@ root.render(
     <React.StrictMode>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/headder" element={<Headder />}>
+        <Route path="/headder/*" element={<Headder />}>
           <Route path=":clienteId" element={<Headder />} />
         </Route>
-        <Route path="/listado" element={<ListadoClientes />} />
+        <Route path="/listado" element={<ListadoClientes />} >
+          <Route path=":clienteId" element={<ListadoClientes />} />
+        </Route>
         <Route path="/infoCliente" element={<InfoCliente />}>
           <Route path=":clienteId" element={<InfoCliente />} />
         </Route>

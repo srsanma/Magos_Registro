@@ -12,12 +12,13 @@ const isLoggedIn = true;
 function App() {
   return (
     <div className="App">
+      <headder>
+        {isLoggedIn || <Headder/>}
+      </headder>
       {!isLoggedIn || <Welcome />}       
-      {isLoggedIn || <Headder/>}
+      
       <main>
-      {/* <InfoCliente clientIndex={2}/>  
-      <RegistroCliente /> 
-      <ListadoClientes /> */}
+
       </main>
     </div>
   );

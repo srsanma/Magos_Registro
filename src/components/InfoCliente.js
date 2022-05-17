@@ -1,6 +1,7 @@
 import CLIENTES from './data.json'
 import {useParams} from 'react-router-dom'
-
+import {Headder} from './Headder'
+import React from 'react';
 
 
 
@@ -9,7 +10,9 @@ export const InfoCliente = () => {
  let nameId = parseInt(i.clienteId) - 1;
 
     return (
-        <div className="container">
+        <React.Fragment>
+            <Headder />
+            <div className="container">            
             <h2>Mago: {CLIENTES[nameId].name}</h2>
             <table className="table table-dark">
                 <thead>
@@ -29,5 +32,7 @@ export const InfoCliente = () => {
             </table>
 
         </div>
+        </React.Fragment>
+        
     )
 }

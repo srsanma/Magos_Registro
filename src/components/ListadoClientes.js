@@ -1,5 +1,6 @@
 import CLIENTES from './data.json'
-
+import {Headder} from './Headder'
+import React from 'react';
 
 export const ListadoClientes = () => {
 
@@ -7,7 +8,10 @@ export const ListadoClientes = () => {
 
     
     return (
-        <div className="container">
+        <React.Fragment>
+            <Headder />
+            <div className="container">
+            
             <h2>Listado de magos registrados</h2>
             <table className="table table-dark">
                 <thead>
@@ -30,5 +34,7 @@ export const ListadoClientes = () => {
                 </tbody>
             </table>
         </div>
+        </React.Fragment>
+
     )
 }
